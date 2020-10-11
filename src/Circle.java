@@ -1,3 +1,3 @@
 public interface Circle {
-    double calculate(double radius);
+    Double calculate(Double radius);
 }
