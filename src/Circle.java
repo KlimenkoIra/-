@@ -13,6 +13,6 @@ public abstract class Circle {
         return this.radius;
     }
 
-    abstract Double calculate (Double radius);
+    abstract Double calculate ();
 
 }
