@@ -2,15 +2,13 @@ import java.util.Objects;
 
 public class WhiteTriangle implements Triangle {
 
-    public WhiteTriangle(Double AB, Double BC, Double AC) {
-        super(AB, BC, AC);
-    }
     @Override
-    public Double calculate() {
-        if (AB + BC > AC && AB + AC > BC && BC + AC > AB)
-            return AB + BC + AC;
+    public Double calculate(Double a, Double b, Double c) {
+        if (a + b > c && a + c > b && b + c > a)
+            System.out.println("Triangle exists");
         else
-            throw new IllegalArgumentException("Triangle doesn't exist");
+            System.out.println("Triangle doesn't exist");
+        return a + b + c;
     }
 }
 

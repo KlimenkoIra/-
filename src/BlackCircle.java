@@ -1,17 +1,11 @@
 import java.util.Objects;
 
-public class BlackCircle extends Circle {
-
-    public BlackCircle(Double radius) {
-        super(radius);
-    }
-
+public class BlackCircle implements Circle {
     @Override
-    public Double calculate() {
-        if (Objects.isNull(radius))
-            throw new IllegalArgumentException("Error: radius is null");
-        else if (radius < 0)
-            throw new IllegalArgumentException("Error: radius is negative");
+    public Double calculate(Double radius) {
+        if (radius <=0) {
+            System.out.println("Error: radius is incorrectly specified");
+        }
        return Math.PI*Math.pow(radius, 2);
     }
 }
