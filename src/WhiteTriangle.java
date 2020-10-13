@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class WhiteTriangle implements Triangle {
+public class WhiteTriangle extends Triangle {
 
     @Override
     public Double calculate(Double a, Double b, Double c) {
