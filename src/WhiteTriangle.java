@@ -9,7 +9,7 @@ public class WhiteTriangle extends Triangle {
     @Override
     public Double calculate() {
         if (AB + BC > CA && AB + CA > BC && BC + CA > AB)
-            return perimeter = AB + BC + AC;
+            return AB + BC + CA;
         else
             throw new IllegalArgumentException("Triangle doesn't exist");
 
