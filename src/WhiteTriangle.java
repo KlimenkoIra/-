@@ -2,13 +2,16 @@ import java.util.Objects;
 
 public class WhiteTriangle extends Triangle {
 
+    public WhiteTriangle(Double AB, Double BC, Double CA) {
+        super(AB, BC, CA);
+    }
+
     @Override
-    public Double calculate(Double a, Double b, Double c) {
-        if (a + b > c && a + c > b && b + c > a)
-            System.out.println("Triangle exists");
+    public Double calculate() {
+        if (AB + BC > CA && AB + CA > BC && BC + CA > AB)
+            return perimeter = AB + BC + AC;
         else
-            System.out.println("Triangle doesn't exist");
-        return a + b + c;
+            throw new IllegalArgumentException("Triangle doesn't exist");
+
     }
 }
-
