@@ -1,16 +1,18 @@
-import java.util.Objects;
+public class BlackTriangle extends Triangle {
 
-public class BlackTriangle implements Triangle {
+    public BlackTriangle(Double AB, Double BC, Double CA) {
+        super(AB, BC, CA);
+    }
+
+    private Double halfPerimeter(){
+        return (AB + BC + CA) / 2;
+    }
+
     @Override
-    public Double calculate(Double a, Double b, Double c) {
-        if (a + b > c && a + c > b && b + c > a)
-            System.out.println("Triangle exists");
+    public Double calculate() {
+        if (AB + BC > CA && AB + CA > BC && BC + CA > AB)
+            return  Math.sqrt(halfPerimeter() * (halfPerimeter() - AB) * (halfPerimeter() - BC) * (halfPerimeter() - CA));
         else
-            System.out.println("Triangle doesn't exist");
-
-        Double halfPerimeter = (a + b + c)/2;
-
-        return Math.sqrt(halfPerimeter* (halfPerimeter- a) * (halfPerimeter - b) * (halfPerimeter - c));
+            throw new IllegalArgumentException("Triangle doesn't exist");
     }
 }
-
