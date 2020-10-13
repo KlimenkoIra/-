@@ -1,7 +1,5 @@
 import java.util.Objects;
 
-import java.util.Objects;
-
 public class BlackCircle extends Circle {
 
     public BlackCircle(Double radius) {
