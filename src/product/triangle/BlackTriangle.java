@@ -1,3 +1,5 @@
+package product.triangle;
+
 public class BlackTriangle extends Triangle {
 
     public BlackTriangle(Double AB, Double BC, Double CA) {
@@ -13,6 +15,6 @@ public class BlackTriangle extends Triangle {
         if (AB + BC > CA && AB + CA > BC && BC + CA > AB)
             return  Math.sqrt(halfPerimeter() * (halfPerimeter() - AB) * (halfPerimeter() - BC) * (halfPerimeter() - CA));
         else
-            throw new IllegalArgumentException("Triangle doesn't exist");
+            throw new IllegalArgumentException("entity.triangle.Triangle doesn't exist");
     }
 }

@@ -1,4 +1,4 @@
-import java.util.Objects;
+package product.triangle;
 
 public class WhiteTriangle extends Triangle {
 
@@ -11,7 +11,7 @@ public class WhiteTriangle extends Triangle {
         if (AB + BC > CA && AB + CA > BC && BC + CA > AB)
             return AB + BC + CA;
         else
-            throw new IllegalArgumentException("Triangle doesn't exist");
+            throw new IllegalArgumentException("entity.triangle.Triangle doesn't exist");
 
     }
 }
