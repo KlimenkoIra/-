@@ -1,7 +1,10 @@
-import java.util.Objects;
-public class WhiteCircle extends Circle {
+package product.circle;
 
-    public WhiteCircle(Double radius) {
+import java.util.Objects;
+
+public class BlackCircle extends Circle {
+
+    public BlackCircle(Double radius) {
         super(radius);
     }
 
@@ -11,6 +14,8 @@ public class WhiteCircle extends Circle {
             throw new IllegalArgumentException("Error: radius is null");
         else if (radius < 0)
             throw new IllegalArgumentException("Error: radius is negative");
-        return 2 * Math.PI * radius;
+        return Math.PI*Math.pow(radius, 2);
     }
 }
+
+
